@@ -1,0 +1,454 @@
+/* ============================================================
+   FS Energy Projects — contact.css
+   Contact page styles
+   ============================================================ */
+
+/* ── PAGE HEADER ── */
+.contact-header {
+  background: var(--charcoal);
+  padding: 80px 40px 72px;
+}
+
+.contact-header__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.contact-header__heading {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 7vw, 80px);
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+  margin-bottom: 22px;
+}
+
+.contact-header__heading em {
+  font-style: normal;
+  color: var(--orange);
+}
+
+.contact-header__sub {
+  font-size: 18px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.65;
+  max-width: 560px;
+}
+
+/* ── CONTACT MAIN ── */
+.contact-main {
+  background: var(--white);
+  padding: 80px 40px;
+}
+
+.contact-main__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 64px;
+  align-items: start;
+}
+
+/* ── FORM ── */
+.contact-form-wrap { width: 100%; }
+
+.contact-form__heading {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--charcoal);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+
+.contact-form__sub {
+  font-size: 15px;
+  color: #777;
+  line-height: 1.6;
+  margin-bottom: 36px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--charcoal);
+}
+
+.form-required { color: var(--orange); }
+
+.form-input {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--charcoal);
+  background: #fafaf9;
+  border: 1px solid #dddbd8;
+  border-radius: 7px;
+  padding: 12px 14px;
+  width: 100%;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  outline: none;
+  appearance: none;
+}
+
+.form-input::placeholder { color: #bbb; }
+
+.form-input:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(240,120,0,0.1);
+  background: var(--white);
+}
+
+.form-input.error {
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px rgba(211,47,47,0.1);
+}
+
+.form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+.form-hint {
+  font-size: 12px;
+  color: #aaa;
+  line-height: 1.4;
+}
+
+.form-error {
+  font-size: 12px;
+  color: var(--red);
+  min-height: 16px;
+}
+
+.form-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--orange);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px 32px;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  width: 100%;
+}
+
+.form-submit:hover { background: var(--orange-dark); transform: translateY(-1px); }
+.form-submit:active { transform: translateY(0); }
+.form-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+.form-success {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #eaf3de;
+  border: 1px solid #c3dfa0;
+  border-radius: 8px;
+  padding: 18px 20px;
+  color: #2d5a0e;
+}
+
+.form-success strong { display: block; font-size: 15px; margin-bottom: 4px; }
+.form-success p { font-size: 14px; line-height: 1.5; }
+.form-success a { color: #2d5a0e; font-weight: 600; }
+.form-success svg { flex-shrink: 0; margin-top: 2px; }
+
+.form-fail {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #fce8e8;
+  border: 1px solid #f0b8b8;
+  border-radius: 8px;
+  padding: 18px 20px;
+  color: #791f1f;
+}
+
+.form-fail strong { display: block; font-size: 15px; margin-bottom: 4px; }
+.form-fail p { font-size: 14px; line-height: 1.5; }
+.form-fail a { color: #791f1f; font-weight: 600; }
+.form-fail svg { flex-shrink: 0; margin-top: 2px; }
+
+/* ── CONTACT SIDE ── */
+.contact-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 80px;
+}
+
+.contact-side__direct {
+  background: #f8f8f7;
+  border: 1px solid #e8e6e2;
+  border-radius: 14px;
+  padding: 28px 24px;
+}
+
+.contact-side__heading {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--charcoal);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  margin-bottom: 18px;
+}
+
+.contact-side__wa {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #25D366;
+  border-radius: 10px;
+  padding: 16px 18px;
+  text-decoration: none;
+  color: var(--white);
+  margin-bottom: 20px;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.contact-side__wa:hover { background: #1da851; transform: translateY(-1px); }
+
+.contact-side__wa-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-side__wa-label {
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0.85;
+  margin-bottom: 2px;
+}
+
+.contact-side__wa-num {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.contact-side__wa-arrow {
+  margin-left: auto;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+.contact-side__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-side__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.contact-side__list-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 7px;
+  background: #eef3f8;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.contact-side__list-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 3px;
+}
+
+.contact-side__list-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--charcoal);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+a.contact-side__list-value:hover { color: var(--orange); }
+
+/* Emergency strip */
+.contact-side__emergency {
+  background: var(--red);
+  border-radius: 10px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.contact-side__emergency-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.contact-side__emergency-text { flex: 1; }
+
+.contact-side__emergency-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 2px;
+}
+
+.contact-side__emergency-sub {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+}
+
+.contact-side__emergency-btn {
+  background: var(--white);
+  color: var(--red);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 9px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s;
+  flex-shrink: 0;
+}
+
+.contact-side__emergency-btn:hover { background: #fce8e8; }
+
+/* Map placeholder */
+.contact-side__map {
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: #f0efed;
+  border: 1px solid #e8e6e2;
+}
+
+.contact-side__map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.contact-side__map-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #bbb;
+  font-size: 14px;
+  text-align: center;
+}
+
+.contact-side__map-note {
+  font-size: 11px;
+  font-style: italic;
+  color: #ccc;
+}
+
+/* ── SERVICE AREA STRIP ── */
+.contact-area {
+  background: #f5f4f2;
+  padding: 64px 40px;
+  border-top: 1px solid #e8e6e2;
+}
+
+.contact-area__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.contact-area__heading {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 700;
+  color: var(--charcoal);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin-bottom: 14px;
+}
+
+.contact-area__body {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.7;
+  max-width: 680px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  .contact-main__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .contact-side { position: static; }
+}
+
+@media (max-width: 680px) {
+  .contact-header { padding: 56px 20px 52px; }
+  .contact-main { padding: 56px 20px; }
+  .form-row { grid-template-columns: 1fr; }
+  .contact-area { padding: 48px 20px; }
+}

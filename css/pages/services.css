@@ -1,0 +1,683 @@
+/* ============================================================
+   FS Energy Projects — services.css
+   Shared across all 4 service pages:
+   electrical, commercial-industrial, solar, air-conditioning
+   ============================================================ */
+
+/* ── SERVICE PAGE HERO ── */
+.svc-hero {
+  background: var(--charcoal);
+  padding: 72px 40px;
+}
+
+.svc-hero__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.svc-hero__heading {
+  font-family: var(--font-display);
+  font-size: clamp(52px, 7vw, 80px);
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 0.95;
+  margin-bottom: 20px;
+}
+
+.svc-hero__heading em {
+  font-style: normal;
+  color: var(--orange);
+}
+
+.svc-hero__sub {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.6;
+  margin-bottom: 32px;
+  max-width: 480px;
+}
+
+.svc-hero__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.svc-hero__image {
+  aspect-ratio: 4/3;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #2a2a2a;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.svc-hero__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.svc-hero__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 13px;
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ── SCOPE / WHAT WE COVER ── */
+.svc-scope {
+  background: var(--white);
+  padding: 88px 40px;
+}
+
+.svc-scope__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.svc-scope__heading {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4.5vw, 48px);
+  font-weight: 700;
+  color: var(--charcoal);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+
+.svc-scope__intro {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.65;
+  max-width: 620px;
+  margin-bottom: 52px;
+}
+
+.svc-scope__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.svc-scope__card {
+  background: #f8f8f7;
+  border: 1px solid #ebebea;
+  border-radius: 12px;
+  padding: 26px 22px;
+  transition:
+    border-color 0.18s,
+    transform 0.18s;
+}
+
+.svc-scope__card:hover {
+  border-color: var(--orange);
+  transform: translateY(-2px);
+}
+
+.svc-scope__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 9px;
+  background: #eef3f8;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  transition:
+    background 0.18s,
+    color 0.18s;
+}
+
+.svc-scope__card:hover .svc-scope__icon {
+  background: var(--orange);
+  color: var(--white);
+}
+
+.svc-scope__title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--charcoal);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  margin-bottom: 8px;
+}
+
+.svc-scope__body {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.65;
+}
+
+/* ── COC / CREDENTIAL CALLOUT PANEL ── */
+.svc-coc {
+  background: #f5f4f2;
+  padding: 56px 40px;
+  border-top: 1px solid #e8e6e2;
+  border-bottom: 1px solid #e8e6e2;
+}
+
+.svc-coc__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.svc-coc__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  background: var(--orange);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.svc-coc__text {
+  flex: 1;
+  min-width: 240px;
+}
+
+.svc-coc__heading {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--charcoal);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  margin-bottom: 8px;
+}
+
+.svc-coc__body {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.65;
+  margin-bottom: 8px;
+}
+
+.svc-coc__note {
+  font-size: 11px;
+  color: #bbb;
+  font-style: italic;
+  border-left: 2px solid #ddd;
+  padding-left: 8px;
+}
+
+/* ── GALLERY ── */
+.svc-gallery {
+  background: var(--white);
+  padding: 88px 40px;
+}
+
+.svc-gallery__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.svc-gallery__heading {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 700;
+  color: var(--charcoal);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin-bottom: 36px;
+}
+
+/*
+  3-column grid. Large item spans 2 columns.
+  No fixed row height — aspect-ratio drives the height.
+  4/3 matches your 800×600 images.
+*/
+.svc-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.svc-gallery__item {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f0efed;
+  border: 1px solid #e8e6e2;
+  display: block;
+}
+
+/*
+  Large item: spans 2 columns and uses a wider ratio
+  so it stays a comfortable height next to the smaller item.
+*/
+.svc-gallery__item--large {
+  grid-column: span 2;
+  aspect-ratio: 16 / 9;
+}
+
+/* ── IMAGE: drop <img> directly inside .svc-gallery__item ── */
+.svc-gallery__item img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.svc-gallery__item:hover img {
+  transform: scale(1.02);
+}
+
+/* ── PLACEHOLDER (remove once image is added) ── */
+.svc-gallery__placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #aaa;
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+  padding: 16px;
+}
+
+.svc-gallery__cta {
+  text-align: center;
+}
+
+.svc-gallery__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--orange);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(240, 120, 0, 0.3);
+  padding-bottom: 3px;
+  transition:
+    gap 0.15s,
+    border-color 0.15s;
+}
+
+.svc-gallery__link:hover {
+  gap: 12px;
+  border-color: var(--orange);
+}
+
+/* ── BOTTOM SERVICE CTA ── */
+.svc-cta {
+  background: var(--charcoal);
+  padding: 88px 40px;
+}
+
+.svc-cta__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.svc-cta__heading {
+  font-family: var(--font-display);
+  font-size: clamp(34px, 5vw, 56px);
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+
+.svc-cta__sub {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.6;
+  margin-bottom: 36px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.svc-cta__actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.svc-cta__call {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.15s;
+  letter-spacing: 0.02em;
+}
+
+.svc-cta__call:hover {
+  color: var(--white);
+}
+
+/* ── OTHER SERVICES ── */
+.svc-other {
+  background: #f5f4f2;
+  padding: 72px 40px;
+}
+
+.svc-other__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.svc-other__heading {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 700;
+  color: var(--charcoal);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin-bottom: 28px;
+}
+
+.svc-other__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.svc-other__card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--white);
+  border: 1px solid #e8e6e2;
+  border-radius: 10px;
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  transition:
+    border-color 0.18s,
+    transform 0.15s;
+}
+
+.svc-other__card:hover {
+  border-color: var(--orange);
+  transform: translateY(-2px);
+}
+
+.svc-other__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 9px;
+  background: #eef3f8;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition:
+    background 0.18s,
+    color 0.18s;
+}
+
+.svc-other__card:hover .svc-other__icon {
+  background: var(--orange);
+  color: var(--white);
+}
+
+.svc-other__name {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--charcoal);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  margin-bottom: 3px;
+}
+
+.svc-other__desc {
+  font-size: 13px;
+  color: #888;
+}
+
+.svc-other__arrow {
+  margin-left: auto;
+  color: #ccc;
+  flex-shrink: 0;
+  transition:
+    color 0.18s,
+    transform 0.18s;
+}
+
+.svc-other__card:hover .svc-other__arrow {
+  color: var(--orange);
+  transform: translateX(3px);
+}
+
+/* ── RESPONSIVE — SERVICE PAGES ── */
+@media (max-width: 900px) {
+  .svc-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .svc-hero__image {
+    aspect-ratio: 16/9;
+  }
+  .svc-scope__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .svc-other__grid {
+    grid-template-columns: 1fr;
+  }
+  /* Stack gallery: large spans full width, small items sit below */
+  .svc-gallery__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .svc-gallery__item--large {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 680px) {
+  .svc-hero {
+    padding: 48px 20px;
+  }
+  .svc-hero__actions {
+    flex-direction: column;
+  }
+  .svc-hero__actions a {
+    width: 100%;
+    justify-content: center;
+  }
+  .svc-scope {
+    padding: 60px 20px;
+  }
+  .svc-scope__grid {
+    grid-template-columns: 1fr;
+  }
+  .svc-coc {
+    padding: 40px 20px;
+  }
+  .svc-coc__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .svc-gallery {
+    padding: 60px 20px;
+  }
+  /* Single column on mobile — aspect-ratio handles height naturally */
+  .svc-gallery__grid {
+    grid-template-columns: 1fr;
+  }
+  .svc-gallery__item--large {
+    grid-column: span 1;
+    aspect-ratio: 16/9;
+  }
+  .svc-cta {
+    padding: 60px 20px;
+  }
+  .svc-cta__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  .svc-cta__actions a {
+    width: 100%;
+    justify-content: center;
+  }
+  .svc-other {
+    padding: 56px 20px;
+  }
+}
+
+/* ── SOLAR PAGE SPECIFIC ── */
+.solar-banner {
+  background: var(--orange);
+  padding: 20px 40px;
+}
+
+.solar-banner__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--white);
+}
+
+.solar-banner__inner svg {
+  flex-shrink: 0;
+}
+
+.solar-banner__inner p {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.solar-brands {
+  background: var(--charcoal);
+  padding: 88px 40px;
+}
+
+.solar-brands__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.solar-brands__heading {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+  margin-bottom: 14px;
+}
+
+.solar-brands__sub {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.65;
+  max-width: 600px;
+  margin-bottom: 48px;
+}
+
+.solar-brands .section-label {
+  color: var(--orange);
+}
+.solar-brands .section-label__line {
+  background: var(--orange);
+}
+
+.solar-brands__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.solar-brand__card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 28px 24px;
+  transition: border-color 0.18s;
+}
+
+.solar-brand__card:hover {
+  border-color: var(--orange);
+}
+
+.solar-brand__name {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  margin-bottom: 6px;
+}
+
+.solar-brand__tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--orange);
+  background: rgba(240, 120, 0, 0.15);
+  padding: 3px 10px;
+  border-radius: 3px;
+  margin-bottom: 16px;
+}
+
+.solar-brand__desc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+  .solar-brands__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .solar-banner {
+    padding: 16px 20px;
+  }
+  .solar-brands {
+    padding: 60px 20px;
+  }
+}
